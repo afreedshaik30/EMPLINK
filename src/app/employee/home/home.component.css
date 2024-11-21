@@ -1,0 +1,95 @@
+/* Container styling */
+.container {
+  max-width: 80%; /* Limit the width of the container */
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding inside the container */
+  background-color: lavender; /* Light background for the container */
+  border: 1px solid #ddd; /* Light border for the container */
+  border-radius: 12px; /* Rounded corners for a smoother look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: "Poppins", sans-serif; /* Ensure consistent font */
+}
+
+/* Heading styling */
+.container h3 {
+  text-align: center; /* Center-align the heading */
+  font-size: 2rem; /* Make the heading more prominent */
+  color: navy; /* Dark text color for contrast */
+  margin-bottom: 20px; /* Space below the heading */
+  font-weight: 500; /* Bold font weight */
+}
+
+/* Flexbox for input and button alignment */
+.input-button-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center; /* Vertically align input and button */
+  justify-content: space-around; /* Spread input and button horizontally */
+  gap: 700px; /* Spacing between input and button */
+}
+
+/* Input field styling */
+mat-form-field {
+  flex: 1; /* Input field takes the available space */
+  margin: 0; /* Remove default margin */
+  max-width: none; /* Allow input field to expand */
+  background: lavender; /* White background for better readability */
+  margin-left: 65px;
+}
+
+mat-form-field input[matInput] {
+  margin-left: 40px;
+  width: 100%; /* Ensure input spans the form field */
+  font-size: 1rem; /* Comfortable font size */
+  color: black;
+  font-family: "Poppins";
+}
+
+/* Button styling */
+button[mat-flat-button] {
+  height: 50px; /* Match the height of the input field */
+  border-radius: 8px; /* Rounded corners for a clean look */
+  font-size: 1rem; /* Comfortable button text size */
+  font-weight: 100; /* Semi-bold font weight */
+  background-color: navy; /* Primary button color */
+  color: white; /* Contrast text color */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  font-family: "Poppins";
+}
+
+button[mat-flat-button]:hover {
+  background-color: darkblue; /* Darken button color on hover */
+}
+
+/* Apply font-family to the whole table */
+.tableContainer table {
+  margin-top: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+button[mat-fab] {
+  background-color: lavender;
+  margin: 10px;
+  padding: 8px;
+  width: 100px;
+  height: 45px;
+}
+
+/* You can also apply font-family specifically to header and data cells */
+.tableContainer th,
+.tableContainer td {
+  font-family: "Poppins", sans-serif;
+  color: navy;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .input-button-container {
+    flex-direction: column; /* Stack input and button on smaller screens */
+    align-items: stretch; /* Make items take full width */
+    gap: 10px; /* Reduce spacing for compact view */
+  }
+
+  button[mat-flat-button] {
+    width: 100%; /* Full-width button on smaller screens */
+  }
+}

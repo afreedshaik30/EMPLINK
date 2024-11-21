@@ -1,0 +1,56 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600;700&display=swap");
+</style>
+
+<div class="container">
+  <div mat-dialog-title>CREATE EMPLOYEE</div>
+
+  <div mat-dialog-content>
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [(ngModel)]="formData.name"
+        type="text"
+        placeholder="Enter Employee Name"
+      />
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [(ngModel)]="formData.email"
+        type="text"
+        placeholder="Enter Employee Email"
+      />
+      <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        [(ngModel)]="formData.salary"
+        type="text"
+        placeholder="Enter Employee Salary"
+      />
+      <mat-icon matSuffix>currency_rupee_circle</mat-icon>
+    </mat-form-field>
+    <br />
+  </div>
+
+  <div mat-dialog-actions>
+    <button
+      (click)="createOrUpdateEmployee(formData)"
+      mat-flat-button
+      [mat-dialog-close]="formData"
+      color="primary"
+    >
+      SAVE
+    </button>
+    <button mat-stroked-button mat-dialog-close="true" color="warn">
+      CANCEL
+    </button>
+  </div>
+</div>
